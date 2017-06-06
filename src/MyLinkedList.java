@@ -46,20 +46,20 @@ public class MyLinkedList {
         previousNode.setMyNode(null);
     }
 
-    public void removeGiven(int target) {
+    public void removeGreaterThanGiven(int target) {
         MyNode  previousNode = headNode;
         MyNode currentNode = headNode;
-        if(currentNode.getValue()==target){
+        if(currentNode.getValue()>target){
             headNode=currentNode.getMyNode();
         }
 
         previousNode = currentNode;
         while(currentNode.getMyNode()!=null){
             currentNode = currentNode.getMyNode();
-            if(currentNode.getValue()==target && currentNode.getMyNode()!=null){
+            if(currentNode.getValue()>target && currentNode.getMyNode()!=null){
                 previousNode.setMyNode(currentNode.getMyNode());
             }
-            else if(currentNode.getValue()==target && currentNode.getMyNode()==null) {
+            else if(currentNode.getValue()>target && currentNode.getMyNode()==null) {
                 previousNode.setMyNode(null);
             }
             else {

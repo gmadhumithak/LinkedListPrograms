@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -22,10 +20,10 @@ public class Main {
         myLinkedList.add(20);
         System.out.println("Printing List after Adding:");
         myLinkedList.printLinkedList();
-        myLinkedList.removeGiven(30);
+        myLinkedList.removeGreaterThanGiven(30);
         System.out.println("Printing List after removing Given:");
         myLinkedList.printLinkedList();
-        myLinkedList.removeGiven(10);
+        myLinkedList.removeGreaterThanGiven(10);
         System.out.println("Printing List after removing Given:");
         myLinkedList.printLinkedList();
     }
